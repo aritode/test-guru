@@ -45,3 +45,12 @@ Answer.create(
 john = User.create(name: 'John', email: 'john@testmail.org', role: 'user')
 daniel = User.create(name: 'Daniel', email: 'daniel007@yahoomail.org', role: 'user')
 bill = User.create(name: 'Bill', email: 'BillyBo@gmailtest.org', role: 'admin')
+
+# Results
+
+Result.create(
+    [{ user: john, test: html, status: 'Finished' },
+     { user: john, test: css, status: 'Not started' },
+     { user: daniel, test: ruby, status: 'Not finished' },
+     { user: bill, test: go_lang, status: 'Finished' }]
+)
