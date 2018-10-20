@@ -48,7 +48,7 @@ bill = User.create(name: 'Bill', email: 'BillyBo@gmailtest.org', role: 'admin')
 
 # Results
 
-Result.create(
+TestPassage.create(
     [{ user: john, test: html, status: 'Finished' },
      { user: john, test: css, status: 'Not started' },
      { user: daniel, test: ruby, status: 'Not finished' },
