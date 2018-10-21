@@ -12,13 +12,19 @@ frontend = Category.create(title: 'Frontend')
 backend = Category.create(title: 'Backend')
 mobile = Category.create(title: 'Mobile Development')
 
+# Users
+
+john = User.create(name: 'John', email: 'john@testmail.org', role: 'user')
+daniel = User.create(name: 'Daniel', email: 'daniel007@yahoomail.org', role: 'user')
+bill = User.create(name: 'Bill', email: 'BillyBo@gmailtest.org', role: 'admin')
+
 # Tests
 
-html = frontend.tests.create(title: 'HTML', level: 0)
-css = frontend.tests.create(title: 'CSS', level: 1)
-ruby = backend.tests.create(title: 'Ruby', level: 2)
-go_lang = backend.tests.create(title: 'Go', level: 3)
-swift = mobile.tests.create(title: 'Swift', level: 4)
+html = frontend.tests.create(title: 'HTML', level: 0, author: john)
+css = frontend.tests.create(title: 'CSS', level: 1, author: john)
+ruby = backend.tests.create(title: 'Ruby', level: 2, author: bill)
+go_lang = backend.tests.create(title: 'Go', level: 3, author: bill)
+swift = mobile.tests.create(title: 'Swift', level: 4, author: daniel)
 
 # Questions
 
@@ -39,12 +45,6 @@ Answer.create(
    { body: 'Correct answer to Ruby', correct: true, question: questions[2] },
    { body: 'Correct answer to Ruby', correct: false, question: questions[2] }]
 )
-
-# Users
-
-john = User.create(name: 'John', email: 'john@testmail.org', role: 'user')
-daniel = User.create(name: 'Daniel', email: 'daniel007@yahoomail.org', role: 'user')
-bill = User.create(name: 'Bill', email: 'BillyBo@gmailtest.org', role: 'admin')
 
 # Results
 
