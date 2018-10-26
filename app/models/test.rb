@@ -7,7 +7,9 @@ class Test < ApplicationRecord
 
   belongs_to :author, class_name: 'User'
 
-  validates :title, presence: true
+  validates :title, presence: true,
+                    uniqueness: { scope: :level,
+                                  message: 'Title and Level must be unique'}
 
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
