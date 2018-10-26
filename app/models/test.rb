@@ -7,6 +7,8 @@ class Test < ApplicationRecord
 
   belongs_to :author, class_name: 'User'
 
+  validates :title, presence: true
+
   default_scope { order(title: :desc)  }
 
   scope :level, ->(level) { where(level: level) }
