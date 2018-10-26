@@ -9,6 +9,8 @@ class Test < ApplicationRecord
 
   validates :title, presence: true
 
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   default_scope { order(title: :desc)  }
 
   scope :level, ->(level) { where(level: level) }
