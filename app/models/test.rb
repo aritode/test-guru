@@ -16,7 +16,7 @@ class Test < ApplicationRecord
   default_scope { order(title: :desc) }
 
   scope :level, ->(level) { where(level: level) }
-  scope :by_category, ->(category) { joins(:category).where(categories: { title: category }) }
+  scope :by_category, ->(cat_title) { joins(:category).where(categories: { title: cat_title }) }
 
   scope :easy,    -> { level(0..1) }
   scope :medium,  -> { level(2..4) }
