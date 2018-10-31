@@ -16,11 +16,15 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    question = @test.questions.create(question_params)
+    question = @test.questions.new(question_params)
 
-    result = ["test_id: #{@test.id}",
-              "Question id: #{question.id}",
-              "Question Body: #{question.body}"]
+    result = if question.save
+               ["test_id: #{@test.id}",
+                "Question id: #{question.id}",
+                "Question Body: #{question.body}"]
+             else
+               ["Error!", question.errors.full_messages, "Question can not be created!"]
+             end
 
     render plain: result.join("\n")
   end
