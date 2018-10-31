@@ -26,6 +26,13 @@ class QuestionsController < ApplicationController
     render plain: result.join("\n")
   end
 
+  def destroy
+    @question = Question.find(params[:id])
+    @question.destroy
+
+    render plain: 'Question deleted'
+  end
+
   private
 
   def set_test
