@@ -1,9 +1,13 @@
 module ApplicationHelper
-  def github_url(author, repo = '')
-    result_body = repo.split(/[-_]/).map(&:capitalize).join
+  def github_url(user:, repo: '')
+    result_body = if repo.blank?
+                    user
+                  else
+                    repo.split(/[-_]/).map(&:capitalize).join
+                  end
 
     link_to result_body,
-            "https://github.com/#{author}/#{repo}",
+            "https://github.com/#{user}/#{repo}",
             target: '_blank'
   end
 
