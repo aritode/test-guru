@@ -1,40 +1,40 @@
 class QuestionsController < ApplicationController
-  before_action :set_test, only: [:index, :create]
-  before_action :set_question, only: [:show, :destroy]
+  before_action :set_test, only: [:new, :create]
+  before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    result = @test.questions.pluck(:body)
-
-    render plain: result.join("\n")
-  end
-
   def show
-    render plain: @question.body
   end
 
   def new
+    @question = @test.questions.new
   end
 
   def create
-    question = @test.questions.new(question_params)
+    @question = @test.questions.new(question_params)
 
-    result = if question.save
-               ["test_id: #{@test.id}",
-                "Question id: #{question.id}",
-                "Question Body: #{question.body}"]
-             else
-               ["Error!", question.errors.full_messages, "Question can not be created!"]
-             end
+    if @question.save
+      redirect_to test_path(@test)
+    else
+      render :new
+    end
+  end
 
-    render plain: result.join("\n")
+  def edit
+  end
+
+  def update
+    if @question.update(question_params)
+      redirect_to test_path(@question.test)
+    else
+      render :edit
+    end
   end
 
   def destroy
     @question.destroy
-
-    render plain: 'Question deleted'
+    redirect_to test_path(@question.test)
   end
 
   private
@@ -48,7 +48,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:body)
+    params.require(:question).permit(:body, :test_id)
   end
 
   def rescue_with_question_not_found

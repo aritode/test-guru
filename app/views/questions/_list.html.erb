@@ -1,0 +1,17 @@
+<p>
+  <%= link_to 'New question', new_test_question_path(test) %>
+</p>
+
+<% if test.questions.present? %>
+  <table>
+    <tr>
+      <th>Body</th>
+      <th colspan="3">Actions</th>
+    </tr>
+
+    <%= render test.questions %>
+
+  </table>
+<% else %>
+  <p>There is no questions available.</p>
+<% end %>
