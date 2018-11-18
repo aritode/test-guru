@@ -5,6 +5,8 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  before_update :before_update_next_question
+
   def completed?
     current_question.nil?
   end
@@ -14,11 +16,14 @@ class TestPassage < ApplicationRecord
       self.correct_questions += 1
     end
 
-    self.current_question = next_question
     save!
   end
 
   private
+
+  def before_update_next_question
+    self.current_question = next_question
+  end
 
   def before_validation_set_first_question
     self.current_question = test.questions.first if test.present?
