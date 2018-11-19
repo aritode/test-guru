@@ -7,6 +7,12 @@ class TestPassage < ApplicationRecord
 
   before_update :before_update_next_question
 
+  SUCCESS_SCORE = 85
+
+  def test_passed?
+    success_percentage >= SUCCESS_SCORE
+  end
+
   def completed?
     current_question.nil?
   end
@@ -17,6 +23,14 @@ class TestPassage < ApplicationRecord
     end
 
     save!
+  end
+
+  def success_percentage
+    (correct_questions / total_questions.to_f) * 100
+  end
+
+  def total_questions
+    test.questions.count
   end
 
   private
