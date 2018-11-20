@@ -3,9 +3,7 @@ class TestPassage < ApplicationRecord
   belongs_to :user
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :before_validation_set_first_question, on: :create
-
-  before_update :before_update_next_question
+  before_validation :before_validation_set_question, on: %i[create update]
 
   SUCCESS_SCORE = 85
 
@@ -35,12 +33,20 @@ class TestPassage < ApplicationRecord
 
   private
 
-  def before_update_next_question
-    self.current_question = next_question
+  def before_validation_set_question
+    if current_question.nil? && test.present?
+      set_first_question
+    else
+      set_next_question
+    end
   end
 
-  def before_validation_set_first_question
-    self.current_question = test.questions.first if test.present?
+  def set_first_question
+    self.current_question = test.questions.first
+  end
+
+  def set_next_question
+    self.current_question = next_question
   end
 
   def correct_answer?(answer_ids)
@@ -55,6 +61,10 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+    remaining_questions.first
+  end
+
+  def remaining_questions
+    test.questions.order(:id).where('id > ?', current_question.id)
   end
 end
