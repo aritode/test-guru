@@ -31,6 +31,10 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
+  def current_question_number
+    current_question_index + 1
+  end
+
   private
 
   def before_validation_set_question
@@ -66,5 +70,9 @@ class TestPassage < ApplicationRecord
 
   def remaining_questions
     test.questions.order(:id).where('id > ?', current_question.id)
+  end
+
+  def current_question_index
+    test.questions.index(current_question)
   end
 end

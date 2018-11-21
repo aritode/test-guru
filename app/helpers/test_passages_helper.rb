@@ -22,4 +22,10 @@ module TestPassagesHelper
     end
   end
 
+  def header_current_question(test_passage)
+    content_tag(:p) do
+      "Current Question: #{test_passage.current_question_number} / #{test_passage.total_questions}"
+    end
+  end
+
 end
