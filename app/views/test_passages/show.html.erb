@@ -1,27 +1,26 @@
 <h1>Passing the <%= @test_passage.test.title %> Test</h1>
 
 <% if @test_passage.current_question.nil? %>
+
   <p>
     There is no available Questions <br>
   </p>
-  <%= link_to 'Back to Tests', tests_path %>
-<% elsif @test_passage.current_question.answers.count.zero? %>
-  <%= header_current_question(@test_passage) %>
 
-  <b>
-    <%= @test_passage.current_question.body %>
-  </b>
+  <%= link_to 'Back to Tests', tests_path %>
+
+<% elsif @test_passage.current_question.answers.count.zero? %>
+
+  <%= render 'header_and_question' %>
 
   <p>
     There is no available Answers <br>
   </p>
-  <%= link_to 'Back to Tests', tests_path %>
-<% else %>
-  <%= header_current_question(@test_passage) %>
 
-  <b>
-    <%= @test_passage.current_question.body %>
-  </b>
+  <%= link_to 'Back to Tests', tests_path %>
+
+<% else %>
+
+  <%= render 'header_and_question' %>
 
   <%= render 'form' %>
 
