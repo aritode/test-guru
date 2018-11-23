@@ -1,0 +1,10 @@
+<h1>The <%= @test_passage.test.title %> Test was Completed!</h1>
+
+<p>
+  Number of All Questions in Test: <%= @test_passage.total_questions %> <br>
+  Questions with Correct Answers: <%= @test_passage.correct_questions %>
+</p>
+
+<%= success_percentage_result_message(@test_passage) %> <br>
+
+<%= link_to 'All Tests', tests_path %>

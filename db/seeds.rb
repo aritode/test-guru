@@ -31,8 +31,8 @@ swift = mobile.tests.create(title: 'Swift', level: 4, author: daniel)
 questions = Question.create(
   [{ body: 'What is the use of figure tag in HTML 5?', test: html },
    { body: 'What are the entities in HTML?', test: html },
-   { body: 'In how many ways you can compare Ruby string?', test: ruby },
-   { body: 'What are Ruby arrays and how they can be created?', test: ruby },
+   { body: 'Who created the Ruby Language?', test: ruby },
+   { body: 'What is the default value of the instance variable?', test: ruby },
    { body: 'Why should one use Go programming language?', test: go_lang },
    { body: 'Why should one use Swift programming language in 2018?', test: swift }]
 )
@@ -42,8 +42,12 @@ questions = Question.create(
 Answer.create(
   [{ body: 'Correct answer to HTML', correct: true, question: questions[0] },
    { body: 'Incorrect answer to HTML', correct: false, question: questions[0] },
-   { body: 'Correct answer to Ruby', correct: true, question: questions[2] },
-   { body: 'Correct answer to Ruby', correct: false, question: questions[2] }]
+   { body: 'Matz', correct: true, question: questions[2] },
+   { body: 'John Doe', correct: false, question: questions[2] },
+   { body: 'Linus Torvalds', correct: false, question: questions[2] },
+   { body: 'Stefan Wintermeyer', correct: false, question: questions[2] },
+   { body: 'Nil', correct: true, question: questions[3] },
+   { body: 'false', correct: false, question: questions[3] }]
 )
 
 # Results
