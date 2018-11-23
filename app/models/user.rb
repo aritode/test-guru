@@ -1,7 +1,5 @@
 class User < ApplicationRecord
 
-  include Auth
-
   has_many :test_passages
   has_many :tests, through: :test_passages
 
@@ -9,6 +7,8 @@ class User < ApplicationRecord
 
   validates :name, :role, presence: true
   validates :email, presence: true, uniqueness: { case_sensitive: false }
+
+  has_secure_password
 
   def by_level(level)
     tests.level(level)
