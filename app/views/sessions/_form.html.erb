@@ -1,7 +1,7 @@
 <%= form_with url: sessions_path, local: true do |form| %>
 
-  <% if flash[:alert] %>
-    <%= flash_message(:alert) %>
+  <% flash.each do |name, _msg| %>
+    <%= flash_message(name) %> <br>
   <% end %>
 
   <p>
