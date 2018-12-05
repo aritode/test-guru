@@ -1,0 +1,43 @@
+@import "colors";
+
+body {
+  background-color: #fff;
+  color: $primary-text-color;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+header {
+  color: $secondary-color;
+  background-color: $primary-color;
+  padding: 5px;
+  border-bottom: 5px solid darken($primary-color, 25%);
+
+  h1 {
+    text-align: center;
+
+    a {
+      color: $secondary-color;
+      text-decoration: none;
+
+      &:hover {
+        color: red;
+        background-color: $primary-color;
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+footer {
+  color: $primary-color;
+  background-color: $secondary-color;
+  padding: 0 5px 5px 5px;
+  border-top: 5px solid darken($secondary-color, 25%);
+  margin-top: 20px;
+}
