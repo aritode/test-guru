@@ -5,16 +5,15 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
+    user = User.authenticate(email: params[:email], password: params[:password])
 
-    if user&.authenticate(params[:password])
+    if user
       session[:user_id] = user.id
       flash[:notice] = "Welcome back, #{user.name}!"
-      redirect_to tests_path
     else
       flash.now[:alert] = 'Are you a Guru? Verify your Email and Password please'
-      redirect_to tests_path
     end
+    redirect_to tests_path
   end
 
   def destroy
