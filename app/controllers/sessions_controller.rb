@@ -9,10 +9,11 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
+      flash[:notice] = "Welcome back, #{user.name}!"
       redirect_to tests_path
     else
       flash.now[:alert] = 'Are you a Guru? Verify your Email and Password please'
-      render :new
+      redirect_to tests_path
     end
   end
 

@@ -1,13 +1,15 @@
+@import "colors";
+
 .flash {
   border: 2px solid;
   padding: 10px;
   border-radius: 5px;
-}
 
-.flash.alert {
-  border-color: #ef2727
-}
+  &.alert {
+    border-color: $flash-alert-color;
+  }
 
-.flash.notice {
-  border-color: #3ddf2b;
+  &.notice {
+    border-color: $flash-notice-color;
+  }
 }
