@@ -8,7 +8,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to tests_path
+      session[:user_id] = @user.id
+      redirect_to tests_path, notice: 'Thanks for signing up!'
     else
       render :new
     end
