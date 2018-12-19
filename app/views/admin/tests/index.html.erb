@@ -1,12 +1,16 @@
 <h1>Tricky Tests</h1>
 
+<p>
+  <%= link_to 'New test', new_admin_test_path %>
+</p>
+
 <% if @tests.present? %>
   <table>
     <tr>
       <th>Title</th>
       <th>Level</th>
       <th>Questions</th>
-      <th>Actions</th>
+      <th colspan="4">Actions</th>
     </tr>
 
     <%= render @tests %>

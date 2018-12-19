@@ -1,0 +1,18 @@
+<p>
+  <strong>Title:</strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @test.level %>
+</p>
+
+<%= link_to 'Edit', edit_admin_test_path(@test) %> |
+<%= link_to 'Back', admin_tests_path %>
+
+<hr>
+
+<h3>Questions:</h3>
+
+<%= render partial: 'questions/list', test: @test %>
