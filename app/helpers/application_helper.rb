@@ -20,4 +20,11 @@ module ApplicationHelper
     Date.today.year
   end
 
+  def current_user_name
+    if current_user.present?
+      "#{current_user.first_name.strip if current_user.first_name.present?}
+      #{current_user.last_name.strip if current_user.last_name.present?}"
+    end
+  end
+
 end
