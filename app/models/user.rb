@@ -32,4 +32,8 @@ class User < ApplicationRecord
     [first_name, last_name].join(' ').html_safe
   end
 
+  def admin?
+    is_a?(Admin)
+  end
+
 end
