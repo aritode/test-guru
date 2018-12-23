@@ -33,3 +33,7 @@
 # Ignore /test because we will not use tests in our app
 
 /test/*
+
+# Do Not Ignore Rails Mailers test templates
+
+!/test/mailers/
