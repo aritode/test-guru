@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    flash[:notice] = "Hello, #{current_user.full_name}!"
+    flash[:notice] = "Hello, #{current_user.full_name.html_safe}!"
     if resource.admin?
       admin_tests_path
     else

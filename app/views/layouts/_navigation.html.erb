@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <p class="nav user">Welcome, <b><%= current_user.full_name %></b> Guru |
+  <p class="nav user">Welcome, <b><%= current_user.full_name.html_safe %></b> Guru |
     <% if current_user.admin? %>
       <%= link_to 'Admin Panel', admin_tests_path %> |
     <% end %>

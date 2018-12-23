@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <div class="nav-admin user">
-    Welcome, <b><%= current_user.full_name %></b> Guru | Admin Panel inside |
+    Welcome, <b><%= current_user.full_name.html_safe %></b> Guru | Admin Panel inside |
      <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
   </div>
 <% else %>
