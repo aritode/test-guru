@@ -1,6 +1,4 @@
 ru:
-  hello: "Привет мир"
-
   helpers:
     submit:
       test:
