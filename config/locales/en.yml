@@ -32,3 +32,7 @@ en:
         success: "Test was successfully created."
       index:
         header: "Tricky Tests"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"

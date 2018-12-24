@@ -34,3 +34,7 @@ ru:
         success: "Тест успешно создан."
       index:
         header: "Доступные Тесты"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
