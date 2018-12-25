@@ -1,6 +1,24 @@
 en:
   hello: "Hello world"
 
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
   tests:
     index:
       header: "Tricky Tests"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created."
+      index:
+        header: "Tricky Tests"
