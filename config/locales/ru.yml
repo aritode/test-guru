@@ -21,6 +21,14 @@ ru:
   tests:
     index:
       header: "Доступные Тесты"
+      no_tests_available: "Нет доступных тестов."
+      table:
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+    test:
+      start_button: "Старт"
 
   test_passages:
     result:

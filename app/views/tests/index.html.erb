@@ -3,16 +3,15 @@
 <% if @tests.present? %>
   <table>
     <tr>
-      <th>Title</th>
-      <th>Level</th>
-      <th>Questions</th>
-      <th>Actions</th>
+      <th><%= t('.table.title') %></th>
+      <th><%= t('.table.level') %></th>
+      <th><%= t('.table.questions') %></th>
+      <th><%= t('.table.actions') %></th>
     </tr>
 
     <%= render @tests %>
 
   </table>
 <% else %>
-  <p>There is no tests available.</p>
+  <p><%= t('.no_tests_available') %></p>
 <% end %>
-

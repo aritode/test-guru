@@ -19,6 +19,14 @@ en:
   tests:
     index:
       header: "Tricky Tests"
+      no_tests_available: "There is no tests available."
+      table:
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+    test:
+      start_button: "Start"
 
   test_passages:
     result:
