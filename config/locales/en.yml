@@ -12,6 +12,12 @@ en:
         level: "Level"
         category_id: "Category"
 
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
   tests:
     index:
       header: "Tricky Tests"
