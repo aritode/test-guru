@@ -4,17 +4,29 @@ en:
       test:
         create: "Create Test"
         update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      question:
+        body: "Body"
+
+  questions_helper:
+    create:
+      header: "Create New %{test_title} Question"
+    edit:
+      header: "Edit %{test_title} Question"
 
   shared:
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+      rescue_with_question_not_found: "Question was not found!"
 
   tests:
     index:
@@ -67,6 +79,24 @@ en:
         edit: "Edit"
         back: "Back"
         questions: "Questions"
+
+    questions:
+      list:
+        table:
+          body: "Body"
+          actions: "Actions"
+        new_question: "New question"
+        no_questions_available: "There is no questions available."
+      show:
+        header: "%{question_test_title} Question"
+        answers: "Answers"
+        new_answer: "New answer"
+      create:
+        success: "Question was successfully created!"
+      update:
+        success: "Question was successfully updated!"
+      destroy:
+        success: "Question was successfully deleted!"
 
   tests_mailer:
     completed_test:

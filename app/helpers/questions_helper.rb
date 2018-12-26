@@ -3,9 +3,9 @@ module QuestionsHelper
     test_title = question.test.title
 
     name = if question.new_record?
-             "Create New #{test_title} Question"
+             t('questions_helper.create.header', test_title: test_title)
            else
-             "Edit #{test_title} Question"
+             t('questions_helper.edit.header', test_title: test_title)
            end
 
     content_tag('h1', name)

@@ -1,0 +1,10 @@
+ru:
+  navigation:
+    back: "Назад"
+    edit: "Редактировать"
+
+  actions:
+    show: "Показать"
+    edit: "Редактировать"
+    delete: "Удалить"
+    delete_confirmation: "Вы уверены?"
