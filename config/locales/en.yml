@@ -38,6 +38,35 @@ en:
         success: "Test was successfully created."
       index:
         header: "Tricky Tests"
+        table:
+          title: "Title"
+          level: "Level"
+          questions: "Questions"
+          actions: "Actions"
+        no_tests_available: "There is no tests available."
+        new_test: "New test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        delete_confirmation: "Are you sure?"
+      edit:
+        back: "Back"
+        header: "Edit %{test_title} Test"
+      new:
+        header: "Create New Test"
+        back: "Back"
+      update:
+        success: "Test successfully updated!"
+      destroy:
+        success: "Test successfully deleted!"
+      show:
+        title: "Title"
+        level: "Level"
+        author: "Author"
+        edit: "Edit"
+        back: "Back"
+        questions: "Questions"
 
   tests_mailer:
     completed_test:
