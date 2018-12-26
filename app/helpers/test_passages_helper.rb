@@ -3,10 +3,10 @@ module TestPassagesHelper
   def success_percentage_result_message(test_passage)
     if test_passage.test_passed?
       result_status = 'success'
-      message = 'SUCCESS! Test was completed!'
+      message = t('test_passages_helper.result.success')
     else
       result_status = 'fail'
-      message = 'FAIL! Please try again.'
+      message = t('test_passages_helper.result.fail')
     end
 
     result_body = [div_percentage_helper(test_passage.success_percentage, result_status),
@@ -24,7 +24,8 @@ module TestPassagesHelper
 
   def header_current_question(test_passage)
     content_tag(:p) do
-      "Current Question: #{test_passage.current_question_number} / #{test_passage.total_questions}"
+      "#{t('test_passages_helper.current_question')}: #{test_passage.current_question_number} /
+        #{test_passage.total_questions}"
     end
   end
 

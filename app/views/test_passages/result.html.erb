@@ -1,10 +1,10 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <p>
-  Number of All Questions in Test: <%= @test_passage.total_questions %> <br>
-  Questions with Correct Answers: <%= @test_passage.correct_questions %>
+  <%= t('.all_quesions_number', total_questions: @test_passage.total_questions) %> <br>
+  <%= t('.questions_with_correct_answers', correct_questions: @test_passage.correct_questions) %>
 </p>
 
 <%= success_percentage_result_message(@test_passage) %> <br>
 
-<%= link_to 'All Tests', tests_path %>
+<%= link_to t('.all_tests'), tests_path %>

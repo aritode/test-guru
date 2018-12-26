@@ -28,6 +28,13 @@ en:
     edit:
       header: "Edit %{test_title} Question"
 
+  test_passages_helper:
+    current_question: "Current Question"
+    result:
+      success: "SUCCESS! Test was completed!"
+      fail: "FAIL! Please, try again."
+    next_button: "Next"
+
   shared:
     errors:
       header:
@@ -50,6 +57,13 @@ en:
   test_passages:
     result:
       header: "The %{title} Test was Completed!"
+      all_quesions_number: "Number of All Questions in Test: %{total_questions}"
+      questions_with_correct_answers: "Questions with Correct Answers: %{correct_questions}"
+      all_tests: "All Tests"
+    show:
+      header: "Passing the %{test_passage_test_title} Test"
+      no_available_questions: "There is no available Questions"
+      no_available_answers: "There is no available Answers"
 
   admin:
     tests:

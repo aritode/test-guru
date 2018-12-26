@@ -28,6 +28,13 @@ ru:
     edit:
       header: "Редактировать %{test_title} Вопрос"
 
+  test_passages_helper:
+    current_question: "Текущий Вопрос"
+    result:
+      success: "УСПЕХ! Тест был успешно завершён!"
+      fail: "ПРОВАЛ! Пожалуйста, повторите ещё раз."
+    next_button: "Далее"
+
   shared:
     errors:
       header:
@@ -52,6 +59,13 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+      all_quesions_number: "Количество Всех Вопросов в Тесте: %{total_questions}"
+      questions_with_correct_answers: "Вопросов с правильными Ответами: %{correct_questions}"
+      all_tests: "Все Тесты"
+    show:
+      header: "Прохождение %{test_passage_test_title} Теста"
+      no_available_questions: "Нет доступных Вопросов"
+      no_available_answers: "Нет доступных Ответов"
 
   admin:
     tests:
