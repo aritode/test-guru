@@ -66,17 +66,10 @@ ru:
           actions: "Действия"
         no_tests_available: "Нет доступных тестов"
         new_test: "Новый тест"
-      test:
-        show: "Показать"
-        edit: "Редактировать"
-        delete: "Удалить"
-        delete_confirmation: "Вы уверены?"
       edit:
-        back: "Назад"
         header: "Редактировать %{test_title} Тест"
       new:
         header: "Создать Новый Тест"
-        back: "Назад"
       update:
         success: "Тест успешно обновлен!"
       destroy:
@@ -85,8 +78,6 @@ ru:
         title: "Название"
         level: "Уровень"
         author: "Автор"
-        edit: "Редактировать"
-        back: "Назад"
         questions: "Вопросы"
 
     questions:

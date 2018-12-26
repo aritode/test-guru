@@ -64,17 +64,10 @@ en:
           actions: "Actions"
         no_tests_available: "There is no tests available."
         new_test: "New test"
-      test:
-        show: "Show"
-        edit: "Edit"
-        delete: "Delete"
-        delete_confirmation: "Are you sure?"
       edit:
-        back: "Back"
         header: "Edit %{test_title} Test"
       new:
         header: "Create New Test"
-        back: "Back"
       update:
         success: "Test successfully updated!"
       destroy:
@@ -83,8 +76,6 @@ en:
         title: "Title"
         level: "Level"
         author: "Author"
-        edit: "Edit"
-        back: "Back"
         questions: "Questions"
 
     questions:
