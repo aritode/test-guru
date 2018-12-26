@@ -7,6 +7,10 @@ ru:
       question:
         create: "Создать Вопрос"
         update: "Обновить Вопрос"
+      answer:
+        create: "Создать Ответ"
+        update: "Обновить Ответ"
+
     label:
       test:
         title: "Название"
@@ -14,6 +18,9 @@ ru:
         category_id: "Категория"
       question:
         body: "Тело вопроса"
+      answer:
+        body: "Тело ответа"
+        correct: "Правильный ответ"
 
   questions_helper:
     create:
@@ -99,6 +106,21 @@ ru:
         success: "Вопрос был успешно обновлён!"
       destroy:
         success: "Вопрос был успешно удалён!"
+    answers:
+      edit:
+        header: "Редактировать Ответ"
+      new:
+        header: "Новый Ответ"
+      show:
+        header: "Вопрос"
+        answer: "Ответ"
+        correct: "Правильный"
+      create:
+        success: "Ответ был успешно создан!"
+      update:
+        success: "Ответ был успешно обновлён!"
+      destroy:
+        success: "Ответ был успешно удалён!"
 
   tests_mailer:
     completed_test:
