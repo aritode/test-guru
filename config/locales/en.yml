@@ -10,6 +10,8 @@ en:
       answer:
         create: "Create Answer"
         update: "Update Answer"
+    select:
+      prompt: "Please select"
 
     label:
       test:

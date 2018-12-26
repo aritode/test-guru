@@ -10,6 +10,8 @@ ru:
       answer:
         create: "Создать Ответ"
         update: "Обновить Ответ"
+    select:
+      prompt: "Выберите категорию:"
 
     label:
       test:
