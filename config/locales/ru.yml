@@ -4,11 +4,38 @@ ru:
       test:
         create: "Создать Тест"
         update: "Обновить Тест"
+      question:
+        create: "Создать Вопрос"
+        update: "Обновить Вопрос"
+      answer:
+        create: "Создать Ответ"
+        update: "Обновить Ответ"
+    select:
+      prompt: "Выберите категорию:"
+
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      question:
+        body: "Тело вопроса"
+      answer:
+        body: "Тело ответа"
+        correct: "Правильный ответ"
+
+  questions_helper:
+    create:
+      header: "Создать Новый %{test_title} Вопрос"
+    edit:
+      header: "Редактировать %{test_title} Вопрос"
+
+  test_passages_helper:
+    current_question: "Текущий Вопрос"
+    result:
+      success: "УСПЕХ! Тест был успешно завершён!"
+      fail: "ПРОВАЛ! Пожалуйста, повторите ещё раз."
+    next_button: "Далее"
 
   shared:
     errors:
@@ -17,14 +44,30 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+      rescue_with_question_not_found: "Вопрос не был найден!"
 
   tests:
     index:
       header: "Доступные Тесты"
+      no_tests_available: "Нет доступных тестов."
+      table:
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+    test:
+      start_button: "Старт"
 
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+      all_quesions_number: "Количество Всех Вопросов в Тесте: %{total_questions}"
+      questions_with_correct_answers: "Вопросов с правильными Ответами: %{correct_questions}"
+      all_tests: "Все Тесты"
+    show:
+      header: "Прохождение %{test_passage_test_title} Теста"
+      no_available_questions: "Нет доступных Вопросов"
+      no_available_answers: "Нет доступных Ответов"
 
   admin:
     tests:
@@ -32,6 +75,59 @@ ru:
         success: "Тест успешно создан."
       index:
         header: "Доступные Тесты"
+        table:
+          title: "Название"
+          level: "Уровень"
+          questions: "Вопросы"
+          actions: "Действия"
+        no_tests_available: "Нет доступных тестов"
+        new_test: "Новый тест"
+      edit:
+        header: "Редактировать %{test_title} Тест"
+      new:
+        header: "Создать Новый Тест"
+      update:
+        success: "Тест успешно обновлен!"
+      destroy:
+        success: "Тест успешно удалён!"
+      show:
+        title: "Название"
+        level: "Уровень"
+        author: "Автор"
+        questions: "Вопросы"
+
+    questions:
+      list:
+        table:
+          body: "Список вопросов"
+          actions: "Действия"
+        new_question: "Новый вопрос"
+        no_questions_available: "Нет доступных вопросов."
+      show:
+        header: "%{question_test_title} Вопрос"
+        answers: "Ответы"
+        new_answer: "Новый ответ"
+      create:
+        success: "Вопрос был успешно создан!"
+      update:
+        success: "Вопрос был успешно обновлён!"
+      destroy:
+        success: "Вопрос был успешно удалён!"
+    answers:
+      edit:
+        header: "Редактировать Ответ"
+      new:
+        header: "Новый Ответ"
+      show:
+        header: "Вопрос"
+        answer: "Ответ"
+        correct: "Правильный"
+      create:
+        success: "Ответ был успешно создан!"
+      update:
+        success: "Ответ был успешно обновлён!"
+      destroy:
+        success: "Ответ был успешно удалён!"
 
   tests_mailer:
     completed_test:

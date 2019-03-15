@@ -1,22 +1,22 @@
-<h1>Passing the <%= @test_passage.test.title %> Test</h1>
+<h1><%= t('.header', test_passage_test_title: @test_passage.test.title) %></h1>
 
 <% if @test_passage.current_question.nil? %>
 
   <p>
-    There is no available Questions <br>
+    <%= t('.no_available_questions') %><br>
   </p>
 
-  <%= link_to 'Back to Tests', tests_path %>
+  <%= link_to t('navigation.back'), tests_path %>
 
 <% elsif @test_passage.current_question.answers.count.zero? %>
 
   <%= render 'header_and_question' %>
 
   <p>
-    There is no available Answers <br>
+    <%= t('.no_available_answers') %><br>
   </p>
 
-  <%= link_to 'Back to Tests', tests_path %>
+  <%= link_to t('navigation.back'), tests_path %>
 
 <% else %>
 

@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def default_url_options
-    { lang: I18n.locale  }
+    { lang: I18n.locale == I18n.default_locale ? nil : I18n.locale }
   end
 
   protected
@@ -19,7 +19,8 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    flash[:notice] = "Hello, #{current_user.full_name.html_safe}!"
+    flash[:notice] = t('devise.sessions.signed_in_welcome_message',
+                       user_full_name: current_user.full_name.html_safe)
     if resource.admin?
       admin_tests_path
     else

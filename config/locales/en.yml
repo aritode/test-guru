@@ -4,25 +4,68 @@ en:
       test:
         create: "Create Test"
         update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
+      answer:
+        create: "Create Answer"
+        update: "Update Answer"
+    select:
+      prompt: "Please select"
+
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      question:
+        body: "Body"
+      answer:
+        body: "Body"
+        correct: "Correct"
+
+  questions_helper:
+    create:
+      header: "Create New %{test_title} Question"
+    edit:
+      header: "Edit %{test_title} Question"
+
+  test_passages_helper:
+    current_question: "Current Question"
+    result:
+      success: "SUCCESS! Test was completed!"
+      fail: "FAIL! Please, try again."
+    next_button: "Next"
 
   shared:
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+      rescue_with_question_not_found: "Question was not found!"
 
   tests:
     index:
       header: "Tricky Tests"
+      no_tests_available: "There is no tests available."
+      table:
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+    test:
+      start_button: "Start"
 
   test_passages:
     result:
       header: "The %{title} Test was Completed!"
+      all_quesions_number: "Number of All Questions in Test: %{total_questions}"
+      questions_with_correct_answers: "Questions with Correct Answers: %{correct_questions}"
+      all_tests: "All Tests"
+    show:
+      header: "Passing the %{test_passage_test_title} Test"
+      no_available_questions: "There is no available Questions"
+      no_available_answers: "There is no available Answers"
 
   admin:
     tests:
@@ -30,6 +73,59 @@ en:
         success: "Test was successfully created."
       index:
         header: "Tricky Tests"
+        table:
+          title: "Title"
+          level: "Level"
+          questions: "Questions"
+          actions: "Actions"
+        no_tests_available: "There is no tests available."
+        new_test: "New test"
+      edit:
+        header: "Edit %{test_title} Test"
+      new:
+        header: "Create New Test"
+      update:
+        success: "Test successfully updated!"
+      destroy:
+        success: "Test successfully deleted!"
+      show:
+        title: "Title"
+        level: "Level"
+        author: "Author"
+        questions: "Questions"
+
+    questions:
+      list:
+        table:
+          body: "Body"
+          actions: "Actions"
+        new_question: "New question"
+        no_questions_available: "There is no questions available."
+      show:
+        header: "%{question_test_title} Question"
+        answers: "Answers"
+        new_answer: "New answer"
+      create:
+        success: "Question was successfully created!"
+      update:
+        success: "Question was successfully updated!"
+      destroy:
+        success: "Question was successfully deleted!"
+    answers:
+      edit:
+        header: "Edit Answer"
+      new:
+        header: "New Answer"
+      show:
+        header: "Question"
+        answer: "Answer"
+        correct: "Correct"
+      create:
+        success: "Answer was successfully created!"
+      update:
+        success: "Answer was successfully updated!"
+      destroy:
+        success: "Answer was successfully deleted!"
 
   tests_mailer:
     completed_test:

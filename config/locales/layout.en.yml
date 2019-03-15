@@ -1,0 +1,14 @@
+en:
+  footer:
+    app_description: "Application for creating, managing and executing of different tests. Tests with questions and answers."
+    app_description_with_url: "Learning project in online-school Thinknetica"
+  site_navigation:
+    welcome: "Welcome"
+    guru: "Guru"
+    log_out: "Log Out"
+    log_in: "Log In"
+    sign_up: "Sign Up"
+    or: "or"
+    admin_panel: "Admin Panel"
+    admin_panel_inside: "Admin Panel inside"
+    admin_panel_title: "TestGuru Admin Panel"
