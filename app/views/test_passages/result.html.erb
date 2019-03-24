@@ -5,6 +5,9 @@
   <%= t('.questions_with_correct_answers', correct_questions: @test_passage.correct_questions) %>
 </p>
 
-<%= success_percentage_result_message(@test_passage) %> <br>
-
-<%= link_to t('.all_tests'), tests_path %>
+<div class="card text-center w-50 mb-3">
+  <div class="card-body">
+    <%= success_percentage_result_message(@test_passage) %> <br>
+    <%= link_to t('.all_tests'), tests_path, class: "btn btn-primary" %>
+  </div>
+</div>

@@ -1,5 +1,15 @@
 <%= header_current_question(@test_passage) %>
 
-<b>
-  <%= @test_passage.current_question.body %>
-</b>
+<% percent = header_current_progress(@test_passage) %>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+       aria-valuenow="<%= percent %>>" aria-valuemin="0" aria-valuemax="100"
+       style="width: <%= percent %>%"></div>
+</div>
+
+<div class="card-header">
+  <h5 class="card-title">
+    <%= @test_passage.current_question.body %>
+  </h5>
+</div>

@@ -3,12 +3,14 @@
   <%= form.collection_check_boxes :answer_ids,
                                   @test_passage.current_question.answers,
                                   :id, :body, include_hidden: false do |b| %>
-    <p>
-      <%= b.check_box id: "answer_ids_#{b.object.id}" %>
-      <%= b.label %>
-    </p>
+    <div class="form-check">
+      <p>
+        <%= b.check_box id: "answer_ids_#{b.object.id}", class: 'form-check-input' %>
+        <%= b.label class: 'form-check-label'%>
+      </p>
+    </div>
   <% end %>
 
-  <p><%= form.submit t('test_passages_helper.next_button') %></p>
+  <%= form.submit t('test_passages_helper.next_button'), class: "btn btn-primary" %>
 
 <% end %>

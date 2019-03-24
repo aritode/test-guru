@@ -1,13 +1,15 @@
 <h1><%= t('tests.index.header') %></h1>
 
 <% if @tests.present? %>
-  <table>
+  <table class="table table-striped table-hover">
+    <thead class="thead-dark">
     <tr>
       <th><%= t('.table.title') %></th>
       <th><%= t('.table.level') %></th>
       <th><%= t('.table.questions') %></th>
       <th><%= t('.table.actions') %></th>
     </tr>
+    </thead>
 
     <%= render @tests %>
 
