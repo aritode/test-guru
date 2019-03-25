@@ -1,14 +1,8 @@
 <% if user_signed_in? %>
-  <div class="nav-admin user">
-    <%= t('site_navigation.welcome') %>, <b><%= current_user.full_name.html_safe %></b>
-    <%= t('site_navigation.guru') %> | <%= t('site_navigation.admin_panel_inside')  %> |
-     <%= link_to t('site_navigation.log_out'), destroy_user_session_path, method: :delete %>
-  </div>
+  <%= t('site_navigation.welcome') %>, <b><%= current_user.full_name.html_safe %></b>
+  <%= t('site_navigation.guru') %> | <%= t('site_navigation.admin_panel_inside') %> |
+  <%= link_to t('site_navigation.log_out'), destroy_user_session_path, method: :delete %>
 <% else %>
-  <p class="nav user">
-    <%= link_to t('site_navigation.log_in'), new_user_session_path %> <%= t('site_navigation.or') %>
-    <%= link_to t('site_navigation.sign_up'), new_user_registration_path %>
-  </p>
+  <%= link_to t('site_navigation.log_in'), new_user_session_path %> <%= t('site_navigation.or') %>
+  <%= link_to t('site_navigation.sign_up'), new_user_registration_path %>
 <% end %>
-
-<hr>
