@@ -57,6 +57,8 @@ ru:
       new:
         enter_the_guru_gates: "Войти во Врата Гуру"
         enter: "Войти"
+        enter_email: "Введите email"
+        remember_me: "Запомнить меня"
       signed_in_welcome_message: "Привет, %{user_full_name}!"
 
     unlocks:
