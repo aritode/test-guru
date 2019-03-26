@@ -1,7 +1,12 @@
 module ApplicationHelper
 
   def flash_message(type, msg)
-    content_tag :p, msg, class: "flash #{type}"
+    type = if type == "notice"
+             "alert-success"
+           elsif type == "alert"
+             "alert-danger"
+           end
+    content_tag :div, msg, class: "alert #{type}"
   end
 
   def github_url(user:, repo: '')
