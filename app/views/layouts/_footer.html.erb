@@ -1,14 +1,16 @@
-<footer>
-  <p>
-    Copyright <%= current_year %>,
-    project: <%= github_url(user: 'aritode', repo: 'test-guru') %>
-    by: <%= github_url(user: 'aritode') %>
-  </p>
-  <p>
-    <%= t('footer.app_description') %>
-  </p>
-  <p>
-    <%= link_to  t('footer.app_description_with_url'),
-                  "https://thinknetica.com/", target: '_blank'%>
-  </p>
+<footer class="bg-dark mt-4">
+  <div class="container-fluid py-3">
+    <div class="row">
+      <div class="col-md-6">
+        <%= t('footer.app_description') %>
+      </div>
+      <div class="col-md-6 text-right small align-self-end">
+        © 2018-<%= current_year %>,
+        project: <%= github_url(user: 'aritode', repo: 'test-guru') %>
+        by: <%= github_url(user: 'aritode') %>
+        <br><%= link_to t('footer.app_description_with_url'),
+                        "https://thinknetica.com/", target: '_blank' %>
+      </div>
+    </div>
+  </div>
 </footer>
