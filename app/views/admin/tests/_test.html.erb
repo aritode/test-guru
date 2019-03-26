@@ -2,9 +2,9 @@
   <td><%= test.title %></td>
   <td><%= test.level %></td>
   <td><%= test.questions.count %></td>
-  <td><%= link_to t('actions.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('actions.edit'), edit_admin_test_path(test) %></td>
-  <td>
-    <%= link_to t('actions.delete'), admin_test_path(test),
+  <td><%= link_to t('actions.show'), admin_test_path(test), class: "btn btn-outline-primary" %>
+    <%= link_to t('actions.edit'), edit_admin_test_path(test), class: "btn btn-outline-success" %>
+    <%= link_to t('actions.delete'), admin_test_path(test), class: "btn btn-outline-danger btn-sm",
                 method: :delete,
                 data: { confirm: t('actions.delete_confirmation') } %>
+  </td>

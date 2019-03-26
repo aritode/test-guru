@@ -91,6 +91,7 @@ ru:
       destroy:
         success: "Тест успешно удалён!"
       show:
+        tests: "Тест"
         title: "Название"
         level: "Уровень"
         author: "Автор"
@@ -128,6 +129,7 @@ ru:
         success: "Ответ был успешно обновлён!"
       destroy:
         success: "Ответ был успешно удалён!"
+      correct_answer_question: "Правильный ответ?"
 
   tests_mailer:
     completed_test:

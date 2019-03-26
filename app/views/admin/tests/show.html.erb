@@ -1,23 +1,29 @@
-<p>
-  <strong><%= t('.title') %>:</strong>
-  <%= @test.title %>
-</p>
+<div class="row justify-content-md-left mt-3 ">
+  <div class="col-md-4 mb-3">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">
+          <%= @test.title %> <%= t('.tests') %>
+        </h1>
+      </div>
+      <div class="card-body">
+        <p class="card-subtitle text-muted">
+          <strong><%= t('.level') %>:</strong> <%= @test.level %>
+        </p>
 
-<p>
-  <strong><%= t('.level') %>:</strong>
-  <%= @test.level %>
-</p>
+        <p class="card-text mt-2">
+          <strong><%= t('.author') %>:</strong> <%= @test.author.full_name.html_safe %>
+        </p>
 
-<p>
-  <strong><%= t('.author') %>:</strong>
-  <%= @test.author.full_name.html_safe %>
-</p>
+        <%= link_to t('navigation.edit'), edit_admin_test_path(@test), class: "card-link" %> |
+        <%= link_to t('navigation.back'), admin_tests_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
 
-<%= link_to t('navigation.edit'), edit_admin_test_path(@test) %> |
-<%= link_to t('navigation.back'), admin_tests_path %>
+  <div class="col-md-8 mb-3">
+    <h3><%= t('.questions') %>:</h3>
 
-<hr>
-
-<h3><%= t('.questions') %>:</h3>
-
-<%= render partial: 'admin/questions/list', test: @test %>
+    <%= render partial: 'admin/questions/list', test: @test %>
+  </div>
+</div>
