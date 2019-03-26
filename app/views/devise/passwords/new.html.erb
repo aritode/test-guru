@@ -1,10 +1,10 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-6">
-    <h2><%= t('.resend_confirmation_instructions') %></h2>
+    <h2><%= t('.forgot_your_password') %></h2>
 
     <div class="card border-primary">
       <div class="card-body">
-        <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
           <% if resource.errors.any? %>
             <div class="alert alert-danger" role="alert">
               <%= devise_error_messages! %>
@@ -15,12 +15,11 @@
             <p>
               <%= f.label :email %>
               <%= f.email_field :email, autofocus: true,
-                                autocomplete: "email", class: 'form-control',
-                                value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+                                autocomplete: "email", class: 'form-control' %>
             </p>
 
             <div class="actions">
-              <%= f.submit t('.resend_confirmation_instructions'), class: 'btn btn-primary' %>
+              <%= f.submit t('.send_me_reset_password_instructions'), class: 'btn btn-primary' %>
             </div>
           </div>
         <% end %>
