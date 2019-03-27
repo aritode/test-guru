@@ -1,18 +1,19 @@
 @import "colors";
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  background-color: #fff;
   color: $primary-text-color;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  margin-bottom: 180px; /* Margin bottom by footer height */
 }
 
 header {
   color: $secondary-color;
   background-color: $primary-color;
-  padding: 5px;
-  border-bottom: 5px solid darken($primary-color, 25%);
+  margin-bottom: 30px;
 
   h1 {
     text-align: center;
@@ -23,7 +24,6 @@ header {
 
       &:hover {
         background-color: $primary-color;
-        text-decoration: underline;
       }
 
       &:visited {
@@ -36,7 +36,12 @@ header {
 footer {
   color: $primary-color;
   background-color: $secondary-color;
-  padding: 0 5px 5px 5px;
+  padding: 35px 5px 25px 5px;
   border-top: 5px solid darken($secondary-color, 25%);
   margin-top: 20px;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
 }

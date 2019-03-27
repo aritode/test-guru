@@ -49,6 +49,9 @@ en:
         header_become_a_guru: "Become a Guru"
         first_name: "First name"
         last_name: "Last name"
+        enter_email: "Enter Email"
+        enter_first_name: "Enter your name"
+        enter_last_name: "Enter your last name"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."

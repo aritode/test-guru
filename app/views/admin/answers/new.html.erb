@@ -1,8 +1,12 @@
-<h1><%= t('.header') %></h1>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
+    <h1><%= t('.header') %></h1>
 
-<p>
-  <%= @question.body %>
-</p>
+    <p>
+      <%= @question.body %>
+    </p>
 
-<%= render 'form' %>
-<%= link_to t('navigation.back'), admin_question_path(@question) %>
+    <%= render 'form' %>
+    <%= link_to t('navigation.back'), admin_question_path(@question), class: "btn btn-primary mt-3" %>
+  </div>
+</div>

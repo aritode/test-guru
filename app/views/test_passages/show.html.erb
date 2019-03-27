@@ -6,22 +6,26 @@
     <%= t('.no_available_questions') %><br>
   </p>
 
-  <%= link_to t('navigation.back'), tests_path %>
+  <%= link_to t('navigation.back'), tests_path, class: "btn btn-primary" %>
 
 <% elsif @test_passage.current_question.answers.count.zero? %>
 
   <%= render 'header_and_question' %>
 
-  <p>
-    <%= t('.no_available_answers') %><br>
-  </p>
+  <div class="card card-body">
+    <%= t('.no_available_answers') %>
+  </div>
 
-  <%= link_to t('navigation.back'), tests_path %>
+  <p>
+    <%= link_to t('navigation.back'), tests_path, class: "btn btn-primary mt-3" %>
+  </p>
 
 <% else %>
 
   <%= render 'header_and_question' %>
 
-  <%= render 'form' %>
+  <div class="card card-body mb-3">
+    <%= render 'form' %>
+  </div>
 
 <% end %>

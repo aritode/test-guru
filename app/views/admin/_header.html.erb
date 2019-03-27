@@ -1,10 +1,15 @@
 <header>
-  <h1><%= link_to 'TestGuru', root_path %></h1>
-  <div class="nav nav-admin">
-    <span class="nav-admin title"><%= t('site_navigation.admin_panel_title') %></span>
-    <%= render 'admin/navigation' %>
-  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-text">
+      <%= t('site_navigation.admin_panel_title') %>
+    </span>
+  </nav>
 
+  <nav class="navbar navbar-light bg-light">
+    <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
+
+    <span class="navbar-text">
+      <%= render 'admin/navigation' %>
+    </span>
+  </nav>
 </header>
-
-

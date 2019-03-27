@@ -29,4 +29,8 @@ module TestPassagesHelper
     end
   end
 
+  def header_current_progress(test_passage)
+    test_passage.current_question_number / test_passage.total_questions.to_f * 100
+  end
+
 end

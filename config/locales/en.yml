@@ -89,6 +89,7 @@ en:
       destroy:
         success: "Test successfully deleted!"
       show:
+        tests: "Test"
         title: "Title"
         level: "Level"
         author: "Author"
@@ -126,6 +127,8 @@ en:
         success: "Answer was successfully updated!"
       destroy:
         success: "Answer was successfully deleted!"
+      correct_answer_question: "Correct answer?"
+
 
   tests_mailer:
     completed_test:

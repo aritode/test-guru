@@ -1,4 +1,4 @@
-<li>
+<li class="list-group-item <%= "list-group-item-success" if answer.correct %>">
   <%= answer.body %>  <br>
   <%= link_to t('actions.show'), admin_answer_path(answer) %> |
   <%= link_to t('actions.edit'), edit_admin_answer_path(answer) %> |

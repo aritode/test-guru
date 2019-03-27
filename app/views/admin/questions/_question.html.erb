@@ -1,9 +1,11 @@
 <tr>
   <td><%= question.body %></td>
-  <td><%= link_to t('actions.show'), admin_question_path(question) %></td>
-  <td><%= link_to t('actions.edit'), edit_admin_question_path(question) %></td>
-  <td>
+  <td><%= link_to t('actions.show'), admin_question_path(question),
+                  class: "btn btn-outline-primary btn-block" %>
+    <%= link_to t('actions.edit'), edit_admin_question_path(question),
+                class: "btn btn-outline-success btn-block" %>
     <%= link_to t('actions.delete'), admin_question_path(question),
+                class: "btn btn-outline-danger btn-block btn-sm",
                 method: :delete,
                 data: { confirm: t('actions.delete_confirmation') } %>
   </td>

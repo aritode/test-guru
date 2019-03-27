@@ -1,11 +1,17 @@
-<%= form_with model: [:admin, @test, @question], local: true do |form| %>
+<div class="card border-primary">
+  <div class="card-body">
+    <%= form_with model: [:admin, @test, @question], local: true do |form| %>
 
-  <%= render 'shared/errors', resource: @question %>
+      <%= render 'shared/errors', resource: @question %>
 
-  <p>
-    <%= form.label :body %>
-    <%= form.text_area :body, cols: 60, rows: 10, id: :question_body %>
-  </p>
+      <div class="form-group">
+        <p>
+          <%= form.label :body %>
+          <%= form.text_area :body, cols: 60, rows: 10, id: :question_body, class: 'form-control' %>
+        </p>
 
-  <p><%= form.submit %></p>
-<% end %>
+        <p><%= form.submit class: "btn btn-outline-primary" %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

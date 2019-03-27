@@ -50,6 +50,9 @@ ru:
         header_become_a_guru: "Стань Гуру"
         first_name: "Имя"
         last_name: "Фамилия"
+        enter_email: "Введите Email"
+        enter_first_name: "Введите имя"
+        enter_last_name: "Введите фамилию"
     sessions:
       signed_in: "Вход в систему выполнен."
       signed_out: "Выход из системы выполнен."

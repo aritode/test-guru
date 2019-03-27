@@ -5,9 +5,9 @@
 }
 
 .fail {
-  color: red;
+  color: $test_passages_fail-color
 }
 
 .success {
-  color: green;
+  color: $test_passages_success-color
 }

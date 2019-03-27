@@ -1,16 +1,31 @@
-<h1><%= t('.header', question_test_title: @question.test.title) %></h1>
+<div class="row justify-content-md-center mt-3">
+  <div class="col-md-5 mb-3">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">
+          <%= t('.header', question_test_title: @question.test.title) %>
+        </h1>
+      </div>
+      <div class="card-body">
+        <p class="card-text mt-2">
+          <%= @question.body %>
+        </p>
 
-<p>
-  <%= @question.body %>
-</p>
+        <%= link_to t('navigation.edit'), edit_admin_question_path(@question), class: "card-link" %> |
+        <%= link_to t('navigation.back'), admin_test_path(@question.test), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
 
-<h2><%= t('.answers') %></h2>
+  <div class="col-md-7 mb-3">
+    <h2><%= t('.answers') %></h2>
 
-<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
+    <%= link_to t('.new_answer'), new_admin_question_answer_path(@question),
+                class: "btn btn-outline-primary mb-3" %>
 
-<ol>
-  <%= render @question.answers %>
-</ol>
+    <ol class="list-group">
+      <%= render @question.answers %>
+    </ol>
 
-<%= link_to t('navigation.edit'), edit_admin_question_path(@question) %> |
-<%= link_to t('navigation.back'), admin_test_path(@question.test) %>
+  </div>
+</div>
