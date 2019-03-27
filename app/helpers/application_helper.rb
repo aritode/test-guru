@@ -1,12 +1,11 @@
 module ApplicationHelper
 
+  BOOTSTRAP_ALERTS = { 'notice' => 'alert-success', 'alert' => 'alert-danger' }.freeze
+  DEFAULT_BOOTSTRAP_ALERT = 'alert-primary'.freeze
+
   def flash_message(type, msg)
-    type = if type == "notice"
-             "alert-success"
-           elsif type == "alert"
-             "alert-danger"
-           end
-    content_tag :div, msg, class: "alert #{type}"
+    alert_type = BOOTSTRAP_ALERTS[type] || DEFAULT_BOOTSTRAP_ALERT
+    content_tag :div, msg, class: "alert #{alert_type}"
   end
 
   def github_url(user:, repo: '')
