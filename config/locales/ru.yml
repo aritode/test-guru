@@ -36,6 +36,7 @@ ru:
       success: "УСПЕХ! Тест был успешно завершён!"
       fail: "ПРОВАЛ! Пожалуйста, повторите ещё раз."
     next_button: "Далее"
+    gist_question: "Gist Вопрос"
 
   shared:
     errors:
@@ -68,6 +69,9 @@ ru:
       header: "Прохождение %{test_passage_test_title} Теста"
       no_available_questions: "Нет доступных Вопросов"
       no_available_answers: "Нет доступных Ответов"
+    gist:
+      success: "Gist успешно сохранён!"
+      failure: "Во время сохранения gist произошла ошибка!"
 
   admin:
     tests:
