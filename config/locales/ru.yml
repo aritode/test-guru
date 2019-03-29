@@ -70,7 +70,7 @@ ru:
       no_available_questions: "Нет доступных Вопросов"
       no_available_answers: "Нет доступных Ответов"
     gist:
-      success: "Gist успешно сохранён!"
+      success: "Gist успешно сохранён! Ссылка: %{url}"
       failure: "Во время сохранения gist произошла ошибка!"
 
   admin:

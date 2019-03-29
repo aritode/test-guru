@@ -68,7 +68,7 @@ en:
       no_available_questions: "There is no available Questions"
       no_available_answers: "There is no available Answers"
     gist:
-      success: "Gist was successfully created!"
+      success: "Gist was successfully created! Link: %{url}"
       failure: "An error occurred while saving gist!"
 
   admin:

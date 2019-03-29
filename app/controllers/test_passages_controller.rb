@@ -10,10 +10,12 @@ class TestPassagesController < ApplicationController
 
   def gist
     gist_service = GistQuestionService.new(@test_passage.current_question)
-    gist_service.call
+    result = gist_service.call
+    gist_url = result.html_url
+    gist_url_tag = %(<a href="#{gist_url}" target="_blank">gist.github.com</a>)
 
     flash_options = if gist_service.success?
-                      { notice: t('.success') }
+                      { notice: t('.success', url: gist_url_tag) }
                     else
                       { alert: t('.failure') }
                     end
