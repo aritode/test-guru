@@ -36,6 +36,7 @@ en:
       success: "SUCCESS! Test was completed!"
       fail: "FAIL! Please, try again."
     next_button: "Next"
+    gist_question: "Gist Question"
 
   shared:
     errors:
@@ -66,6 +67,9 @@ en:
       header: "Passing the %{test_passage_test_title} Test"
       no_available_questions: "There is no available Questions"
       no_available_answers: "There is no available Answers"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist!"
 
   admin:
     tests:
