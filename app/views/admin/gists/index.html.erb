@@ -1,0 +1,27 @@
+<div class="row justify-content-md-center mt-3 ">
+  <div class="col-md-auto mb-3">
+    <h2><%= t('.header') %></h2>
+
+    <% if @gists.present? %>
+      <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+        <tr>
+          <th><%= t('.table.question') %></th>
+          <th><%= t('.table.gist_url') %></th>
+          <th><%= t('.table.user') %></th>
+        </tr>
+        </thead>
+
+        <%= render @gists %>
+
+      </table>
+    <% else %>
+      <p><%= t('.no_gists_available') %></p>
+    <% end %>
+
+    <p>
+      <%= link_to t('navigation.back'), admin_tests_path, class: "btn btn-primary" %>
+    </p>
+
+  </div>
+</div>

@@ -70,7 +70,7 @@ ru:
       no_available_questions: "Нет доступных Вопросов"
       no_available_answers: "Нет доступных Ответов"
     gist:
-      success: "Gist успешно сохранён!"
+      success: "Gist успешно сохранён! Ссылка: %{url}"
       failure: "Во время сохранения gist произошла ошибка!"
 
   admin:
@@ -100,6 +100,14 @@ ru:
         level: "Уровень"
         author: "Автор"
         questions: "Вопросы"
+    gists:
+      index:
+        table:
+          question: "Вопрос"
+          gist_url: "Gist URL"
+          user: "Пользователь"
+        no_gists_available: "Нет доступных Gists"
+        header: "Список всех Gists"
 
     questions:
       list:
@@ -138,3 +146,6 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  gist_question_service:
+    question_about: "Вопрос про %{test_title} от TestGuru"

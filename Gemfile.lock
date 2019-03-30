@@ -88,6 +88,10 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.7.0)
       devise (>= 4.5)
+    dotenv (2.7.2)
+    dotenv-rails (2.7.2)
+      dotenv (= 2.7.2)
+      railties (>= 3.2, < 6.1)
     erubi (1.7.1)
     execjs (2.7.0)
     faraday (0.15.4)
@@ -131,6 +135,8 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    octokit (4.13.0)
+      sawyer (~> 0.8.0, >= 0.5.3)
     orm_adapter (0.5.0)
     popper_js (1.14.5)
     public_suffix (3.0.3)
@@ -194,6 +200,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    sawyer (0.8.1)
+      addressable (>= 2.3.5, < 2.6)
+      faraday (~> 0.8, < 1.0)
     selenium-webdriver (3.14.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -245,11 +254,13 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.0)
   devise-i18n
+  dotenv-rails
   faraday
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
   listen (>= 3.0.5, < 3.2)
+  octokit (~> 4.0)
   puma (~> 3.11)
   rails (~> 5.2.1)
   rails-i18n (~> 5.1)

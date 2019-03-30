@@ -68,7 +68,7 @@ en:
       no_available_questions: "There is no available Questions"
       no_available_answers: "There is no available Answers"
     gist:
-      success: "Gist was successfully created!"
+      success: "Gist was successfully created! Link: %{url}"
       failure: "An error occurred while saving gist!"
 
   admin:
@@ -98,6 +98,14 @@ en:
         level: "Level"
         author: "Author"
         questions: "Questions"
+    gists:
+      index:
+        table:
+          question: "Question"
+          gist_url: "Gist URL"
+          user: "User"
+        no_gists_available: "There is no available Gists"
+        header: "List of all Gists"
 
     questions:
       list:
@@ -137,3 +145,6 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  gist_question_service:
+    question_about: "A question about %{test_title} from TestGuru"
