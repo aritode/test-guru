@@ -30,10 +30,11 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Ignore /test because we will not use tests in our app
+# Ignore .ENV
+/.env
 
+# Ignore /test because we will not use tests in our app
 /test/*
 
 # Do Not Ignore Rails Mailers test templates
-
 !/test/mailers/
