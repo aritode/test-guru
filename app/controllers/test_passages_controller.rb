@@ -15,6 +15,8 @@ class TestPassagesController < ApplicationController
     gist_url_tag = %(<a href="#{gist_url}" target="_blank">gist.github.com</a>)
 
     flash_options = if gist_service.success?
+                      current_user.gists.create(question: @test_passage.current_question,
+                                                url: gist_url)
                       { notice: t('.success', url: gist_url_tag) }
                     else
                       { alert: t('.failure') }

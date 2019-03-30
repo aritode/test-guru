@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
 
   has_many :tests_created, class_name: 'Test', foreign_key: :author_id
+  has_many :gists
 
   VALID_EMAIL_PATTERN = /\A\w+@\w+\.\w+\z/
 
