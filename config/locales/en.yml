@@ -98,6 +98,14 @@ en:
         level: "Level"
         author: "Author"
         questions: "Questions"
+    gists:
+      index:
+        table:
+          question: "Question"
+          gist_url: "Gist URL"
+          user: "User"
+        no_gists_available: "There is no available Gists"
+        header: "List of all Gists"
 
     questions:
       list:

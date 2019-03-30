@@ -100,6 +100,14 @@ ru:
         level: "Уровень"
         author: "Автор"
         questions: "Вопросы"
+    gists:
+      index:
+        table:
+          question: "Вопрос"
+          gist_url: "Gist URL"
+          user: "Пользователь"
+        no_gists_available: "Нет доступных Gists"
+        header: "Список всех Gists"
 
     questions:
       list:
