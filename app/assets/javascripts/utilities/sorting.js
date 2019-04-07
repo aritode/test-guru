@@ -28,12 +28,20 @@ function sortRowsByTitle() {
     }
 
     var sortedTable = document.createElement('table')
+    sortedTable.classList.add('table', 'table-striped', 'table-hover')
 
-    sortedTable.classList.add('table')
-    sortedTable.appendChild(rows[0])
+    var tableThead = sortedTable.createTHead()
+    tableThead.classList.add('thead-dark')
+
+    // Insert Title into Thead Element
+    sortedTable.appendChild(tableThead).appendChild(rows[0])
+
+    // Insert Table rows into Tbody
+    var tableTBody = document.createElement('tbody')
+    tableTBody = sortedTable.appendChild(tableTBody)
 
     for (var i = 0; i < sortedRows.length; i++) {
-        sortedTable.appendChild(sortedRows[i])
+        tableTBody.appendChild(sortedRows[i])
     }
 
     table.parentNode.replaceChild(sortedTable, table)
