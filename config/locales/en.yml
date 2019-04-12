@@ -98,6 +98,8 @@ en:
         level: "Level"
         author: "Author"
         questions: "Questions"
+      form_inline:
+        submit: "OK"
     gists:
       index:
         table:
