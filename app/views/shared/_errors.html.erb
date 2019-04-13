@@ -1,4 +1,4 @@
-<% if resource.errors.present? %>
+<% if resource.present? && resource.errors.present? %>
   <div class="alert alert-danger" role="alert">
     <h2><%= t('.header', count: resource.errors.count) %></h2>
 

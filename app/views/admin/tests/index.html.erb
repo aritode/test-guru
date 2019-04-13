@@ -6,6 +6,8 @@
       <%= link_to t('.new_test'), new_admin_test_path, class: "btn btn-outline-primary btn-lg" %>
     </p>
 
+    <%= render 'shared/errors', resource: @test %>
+
     <% if @tests.present? %>
       <table class="table table-striped table-hover">
         <thead class="thead-dark">
