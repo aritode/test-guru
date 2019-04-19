@@ -2,11 +2,10 @@
 
 <% percent = header_current_progress(@test_passage) %>
 
-<div class="progress">
+<%= content_tag :div, class: "progress", data: { percent: percent } do %>
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-       aria-valuenow="<%= percent %>>" aria-valuemin="0" aria-valuemax="100"
-       style="width: <%= percent %>%"></div>
-</div>
+       aria-valuemin="0" aria-valuemax="100"></div>
+<% end %>
 
 <div class="card-header">
   <h5 class="card-title">
