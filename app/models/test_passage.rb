@@ -35,6 +35,10 @@ class TestPassage < ApplicationRecord
     current_question_index + 1
   end
 
+  def current_question_index
+    test.questions.index(current_question)
+  end
+
   private
 
   def before_validation_set_question
@@ -69,7 +73,4 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id > ?', current_question.id)
   end
 
-  def current_question_index
-    test.questions.index(current_question)
-  end
 end
