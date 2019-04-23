@@ -45,6 +45,16 @@ en:
         other: "%{count} errors detected"
       rescue_with_question_not_found: "Question was not found!"
 
+  contacts:
+    new:
+      contact_us: "Contact Us"
+      name: "Your Name"
+      email: "Your Email"
+      body: "Message"
+      send_button: "Send"
+    create:
+      success: "Your message was successfully sent!"
+
   tests:
     index:
       header: "Tricky Tests"

@@ -1,0 +1,38 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-7">
+    <h1 class="text-center "><%= t('.contact_us') %></h1>
+
+    <div class="card border-primary mt-4 mb-4">
+      <div class="card-body">
+        <%= form_for @contact do |form| %>
+
+          <%= render 'shared/errors', resource: @contact %>
+
+          <div class="form-group">
+            <p>
+              <%= form.label :name, t('.name') %>
+              <%= form.text_field :name, id: :contact_name, class: 'form-control',
+                                  value: current_user.full_name, readonly: true %>
+
+            </p>
+
+            <p>
+              <%= form.label :email, t('.email') %>
+              <%= form.text_field :email, id: :contact_email, class: 'form-control',
+                                  value: current_user.email, readonly: true %>
+            </p>
+
+            <p>
+              <%= form.label :body, t('.body') %>
+              <%= form.text_area :body, cols: 60, rows: 10, id: :contact_body,
+                                 class: 'form-control' %>
+            </p>
+
+            <p><%= form.submit t('.send_button'), class: "btn btn-outline-primary" %></p>
+          </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

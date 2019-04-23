@@ -47,6 +47,16 @@ ru:
         other: "Обнаружено %{count} ошибки"
       rescue_with_question_not_found: "Вопрос не был найден!"
 
+  contacts:
+    new:
+      contact_us: "Обратная связь"
+      name: "Ваше имя"
+      email: "Ваш Email"
+      body: "Cообщение"
+      send_button: "Отправить"
+    create:
+      success: "Ваше сообщение успешно отправлено!"
+
   tests:
     index:
       header: "Доступные Тесты"
