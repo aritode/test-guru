@@ -153,6 +153,9 @@ en:
         success: "Answer was successfully deleted!"
       correct_answer_question: "Correct answer?"
 
+  contacts_mailer:
+    contact_email:
+      subject: "TestGuru Project - Contact Form"
 
   tests_mailer:
     completed_test:

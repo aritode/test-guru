@@ -155,6 +155,10 @@ ru:
         success: "Ответ был успешно удалён!"
       correct_answer_question: "Правильный ответ?"
 
+  contacts_mailer:
+    contact_email:
+      subject: "TestGuru Project - Контактная Форма"
+
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
