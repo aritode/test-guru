@@ -4,6 +4,7 @@
     <% if current_user.admin? %>
       <%= link_to t('site_navigation.admin_panel'), admin_tests_path %> |
     <% end %>
+    <%= link_to t('site_navigation.contact_us'), new_contact_path %> |
     <%= link_to t('site_navigation.log_out'), destroy_user_session_path, method: :delete %>
 <% else %>
     <%= link_to t('site_navigation.log_in'), new_user_session_path %> <%= t('site_navigation.or') %>

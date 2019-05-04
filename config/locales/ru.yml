@@ -47,6 +47,16 @@ ru:
         other: "Обнаружено %{count} ошибки"
       rescue_with_question_not_found: "Вопрос не был найден!"
 
+  contacts:
+    new:
+      contact_us: "Обратная связь"
+      name: "Ваше имя"
+      email: "Ваш Email"
+      body: "Cообщение"
+      send_button: "Отправить"
+    create:
+      success: "Ваше сообщение успешно отправлено!"
+
   tests:
     index:
       header: "Доступные Тесты"
@@ -144,6 +154,10 @@ ru:
       destroy:
         success: "Ответ был успешно удалён!"
       correct_answer_question: "Правильный ответ?"
+
+  contacts_mailer:
+    contact_email:
+      subject: "TestGuru Project - Контактная Форма"
 
   tests_mailer:
     completed_test:
