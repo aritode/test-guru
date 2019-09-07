@@ -15,6 +15,9 @@ class User < ApplicationRecord
   has_many :tests_created, class_name: 'Test', foreign_key: :author_id
   has_many :gists
 
+  has_many :achievements
+  has_many :badges, through: :achievements
+
   VALID_EMAIL_PATTERN = /\A\w+@\w+\.\w+\z/
 
   validates :email, presence: true,
