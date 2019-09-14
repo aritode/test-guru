@@ -7,6 +7,10 @@ class TestPassage < ApplicationRecord
 
   SUCCESS_SCORE = 85
 
+  def set_success
+    self.success = test_passed?
+  end
+
   def test_passed?
     success_percentage >= SUCCESS_SCORE
   end
@@ -19,6 +23,7 @@ class TestPassage < ApplicationRecord
     if correct_answer?(answer_ids)
       self.correct_questions += 1
     end
+    set_success
 
     save!
   end
