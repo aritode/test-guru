@@ -10,6 +10,9 @@ en:
       answer:
         create: "Create Answer"
         update: "Update Answer"
+      badge:
+        create: "Create Badge"
+        update: "Update Badge"
     select:
       prompt: "Please select"
 
@@ -23,6 +26,11 @@ en:
       answer:
         body: "Body"
         correct: "Correct"
+      table:
+        title: "Title"
+        image: "Image"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
 
   questions_helper:
     create:
@@ -73,6 +81,12 @@ en:
       all_quesions_number: "Number of All Questions in Test: %{total_questions}"
       questions_with_correct_answers: "Questions with Correct Answers: %{correct_questions}"
       all_tests: "All Tests"
+      granted_badges: "Granted Badges"
+      table:
+        title: "Title"
+        image: "Image"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
     show:
       header: "Passing the %{test_passage_test_title} Test"
       no_available_questions: "There is no available Questions"
@@ -82,6 +96,34 @@ en:
       failure: "An error occurred while saving gist!"
 
   admin:
+    badges:
+      create:
+        success: "Badge successfully created"
+      index:
+        header: "Available Badges"
+        table:
+          title: "Title"
+          image: "Image"
+          rule_type: "Rule Type"
+          rule_option: "Rule Option"
+          actions: "Actions"
+        new_badge: "New Badge"
+        no_badges_available: "No available badges"
+      edit:
+        header: "Edit Badge"
+      new:
+        header: "Create New Badge"
+      update:
+        success: "Badge updated"
+      destroy:
+        success: "Badge deleted!"
+      show:
+        badge: "Badge"
+        badges: "Badges"
+        badge_name: "Badge name"
+        image_url: "Image Url"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
     tests:
       create:
         success: "Test was successfully created."
@@ -163,3 +205,21 @@ en:
 
   gist_question_service:
     question_about: "A question about %{test_title} from TestGuru"
+
+  badges:
+    index:
+      header: "Available Badges"
+      table:
+        title: "Title"
+        image: "Image"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
+      no_badges_available: "No badges available"
+    show:
+      header: "Badges of Guru"
+      table:
+        title: "Title"
+        image: "Image"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
+      no_badges_available: "No badges available"

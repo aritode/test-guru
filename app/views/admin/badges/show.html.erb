@@ -1,0 +1,37 @@
+<div class="row justify-content-md-left mt-3 ">
+  <div class="col-md-4 mb-3">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">
+          <%= badge_image_helper(image_url: @badge.image_url) %>
+        </h1>
+      </div>
+      <div class="card-body">
+        <%= link_to t('navigation.edit'), edit_admin_badge_path(@badge), class: "card-link" %> |
+        <%= link_to t('navigation.back'), admin_badges_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8 mb-3">
+    <h3><%= t('.badge_name') %>:</h3>
+
+    <h5>
+      <%= @badge.name %>
+    </h5>
+
+    <hr>
+
+    <p>
+      <strong><%= t('.image_url') %>:</strong> <%= @badge.image_url %>
+    </p>
+
+    <p>
+      <strong><%= t('.rule_type') %>:</strong> <%= @badge.rule_type %>
+    </p>
+
+    <p>
+      <strong><%= t('.rule_option') %>:</strong> <%= @badge.rule_option %>
+    </p>
+  </div>
+</div>

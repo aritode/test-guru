@@ -4,6 +4,8 @@ ru:
     app_description_with_url: "Учебный проект в онлайн-школе Thinknetica"
   site_navigation:
     welcome: "Добро пожаловать"
+    badges: "Бэйджи"
+    all: "Все"
     guru: "Гуру"
     log_out: "Выйти"
     log_in: "Войти"
@@ -12,5 +14,6 @@ ru:
     admin_panel: "Панель Администратора"
     admin_panel_inside: "в Панели Администратора"
     admin_panel_title: "Панель Администратора"
+    show_all_badges: "Показать все Бэйджи"
     show_all_gists: "Показать все Gists"
     contact_us: "Контактная форма"

@@ -10,6 +10,9 @@ ru:
       answer:
         create: "Создать Ответ"
         update: "Обновить Ответ"
+      badge:
+        create: "Создать Бэйдж"
+        update: "Обновить Бэйдж"
     select:
       prompt: "Выберите категорию:"
 
@@ -23,6 +26,11 @@ ru:
       answer:
         body: "Тело ответа"
         correct: "Правильный ответ"
+      badge:
+        name: "Название"
+        image_url: "Image Url"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
 
   questions_helper:
     create:
@@ -75,6 +83,12 @@ ru:
       all_quesions_number: "Количество Всех Вопросов в Тесте: %{total_questions}"
       questions_with_correct_answers: "Вопросов с правильными Ответами: %{correct_questions}"
       all_tests: "Все Тесты"
+      granted_badges: "Полученные Бэйжди"
+      table:
+        title: "Название"
+        image: "Изображение"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
     show:
       header: "Прохождение %{test_passage_test_title} Теста"
       no_available_questions: "Нет доступных Вопросов"
@@ -84,6 +98,35 @@ ru:
       failure: "Во время сохранения gist произошла ошибка!"
 
   admin:
+    badges:
+      create:
+        success: "Бэйдж успешно создан."
+      index:
+        header: "Доступные Бэйджи"
+        table:
+          title: "Название"
+          image: "Изображение"
+          rule_type: "Rule Type"
+          rule_option: "Rule Option"
+          actions: "Действия"
+        new_badge: "Новый бэйдж"
+        no_badges_available: "Нет доступных бэйджей"
+      edit:
+        header: "Редактировать Бэйдж"
+      new:
+        header: "Создать Новый Бэйдж"
+      update:
+        success: "Бэйдж успешно обновлен!"
+      destroy:
+        success: "Бэйдж успешно удалён!"
+      show:
+        badge: "Бэйдж"
+        badges: "Бэйджи"
+        badge_name: "Название Бэйджа"
+        image_url: "Image Url"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
+
     tests:
       create:
         success: "Тест успешно создан."
@@ -165,3 +208,21 @@ ru:
 
   gist_question_service:
     question_about: "Вопрос про %{test_title} от TestGuru"
+
+  badges:
+    index:
+      header: "Доступные Бэйджи"
+      table:
+        title: "Название"
+        image: "Изображение"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
+      no_badges_available: "Нет доступных бэйджей"
+    show:
+      header: "Полученные бэйджи Гуру"
+      table:
+        title: "Название"
+        image: "Изображение"
+        rule_type: "Rule Type"
+        rule_option: "Rule Option"
+      no_badges_available: "Нет полученных бэйджей"

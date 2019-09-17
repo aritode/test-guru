@@ -1,0 +1,18 @@
+<tr>
+  <td class="align-middle">
+    <%= content_tag :span, badge.name, class: 'test-title' %>
+  </td>
+  <td class="align-middle">
+    <%= badge_image_helper(image_url: badge.image_url, image_size: 'small')  %>
+  </td>
+  <td class="align-middle"><%= badge.rule_type %></td>
+  <td class="align-middle"><%= badge.rule_option %></td>
+  <td class="align-middle">
+    <%= link_to t('actions.show'), admin_badge_path(badge), class: "btn btn-outline-primary" %>
+    <%= link_to t('actions.edit'),
+                edit_admin_badge_path(badge),
+                class: "btn btn-outline-success" %>
+    <%= link_to t('actions.delete'), admin_badge_path(badge), class: "btn btn-outline-danger btn-sm",
+                method: :delete,
+                data: { confirm: t('actions.delete_confirmation') } %>
+  </td>

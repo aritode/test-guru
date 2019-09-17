@@ -52,14 +52,33 @@ Answer.create(
    { body: 'Linus Torvalds', correct: false, question: questions[2] },
    { body: 'Stefan Wintermeyer', correct: false, question: questions[2] },
    { body: 'Nil', correct: true, question: questions[3] },
-   { body: 'false', correct: false, question: questions[3] }]
+   { body: 'false', correct: false, question: questions[3] },
+   { body: 'GoLang false answer', correct: false, question: questions[4] },
+   { body: 'GoLang TRUE answer', correct: true, question: questions[4] }
+  ]
 )
 
 # Results
 
 TestPassage.create(
-    [{ user: john, test: html, status: 'Finished' },
-     { user: john, test: css, status: 'Not started' },
-     { user: daniel, test: ruby, status: 'Not finished' },
-     { user: bill, test: go_lang, status: 'Finished' }]
+    [{ user: john, test: html, status: 'Finished', success: true },
+     { user: john, test: css, status: 'Not started', success: false },
+     { user: daniel, test: ruby, status: 'Not finished', success: false }]
+)
+
+# Badges
+
+Badge.create(
+  [{ name: "Бэйдж после успешного прохождения всех тестов из категории Backend",
+     image_url: "badges/achievement_silver.png",
+     rule_type: "category",
+     rule_option: 2 },
+   { name: "Бэйдж после успешного прохождения теста с первой попытки",
+     image_url: "badges/achievement_bronze.png",
+     rule_type: "first_try" },
+   { name: "Бэйдж после успешного прохождения всех тестов определённого уровня",
+     image_url: "badges/achievement_gold.png",
+     rule_type: "level",
+     rule_option: 2 }
+  ]
 )

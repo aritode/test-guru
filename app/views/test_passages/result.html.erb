@@ -7,6 +7,29 @@
       <%= t('.questions_with_correct_answers', correct_questions: @test_passage.correct_questions) %>
     </p>
 
+    <% if @badges.present? %>
+      <div class="card-header">
+        <h1 class="card-title">
+          <%= t('.granted_badges') %>
+        </h1>
+        <table class="table table-striped table-hover">
+          <thead class="thead-dark">
+          <tr>
+            <th class="sort-by-title pointer">
+              <%= t('.table.title') %>
+              <%= octicon 'arrow-up', class: 'text-success hide' %>
+              <%= octicon 'arrow-down', class: 'text-success hide' %>
+            </th>
+            <th><%= t('.table.image') %></th>
+          </tr>
+          </thead>
+
+          <%= render @badges %>
+
+        </table>
+      </div>
+    <% end %>
+
     <div class="card text-center mb-3">
       <div class="card-body">
         <%= success_percentage_result_message(@test_passage) %> <br>
