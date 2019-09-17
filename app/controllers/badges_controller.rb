@@ -4,7 +4,7 @@ class BadgesController < ApplicationController
     @badges = Badge.all
   end
 
-  def show
+  def collected
     @badges = current_user.badges
   end
 

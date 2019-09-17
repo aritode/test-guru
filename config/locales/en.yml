@@ -215,7 +215,7 @@ en:
         rule_type: "Rule Type"
         rule_option: "Rule Option"
       no_badges_available: "No badges available"
-    show:
+    collected:
       header: "Badges of Guru"
       table:
         title: "Title"

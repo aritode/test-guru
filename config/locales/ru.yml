@@ -218,7 +218,7 @@ ru:
         rule_type: "Rule Type"
         rule_option: "Rule Option"
       no_badges_available: "Нет доступных бэйджей"
-    show:
+    collected:
       header: "Полученные бэйджи Гуру"
       table:
         title: "Название"

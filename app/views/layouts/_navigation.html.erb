@@ -2,7 +2,7 @@
     <%= t('site_navigation.welcome') %>,
     <b><%= current_user.full_name.html_safe %></b> <%= t('site_navigation.guru') %> |
     <%= t('site_navigation.badges') %>:
-    <%= link_to t('site_navigation.guru'), badge_path(current_user) %> /
+    <%= link_to t('site_navigation.guru'), collected_badges_path %> /
     <%= link_to t('site_navigation.all'), badges_path %> |
     <% if current_user.admin? %>
       <%= link_to t('site_navigation.admin_panel'), admin_tests_path %> |
