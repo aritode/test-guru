@@ -1,0 +1,55 @@
+<div class="card border-primary">
+  <div class="card-body">
+    <%= form_with model: [:admin, @badge], local: true do |form| %>
+
+      <%= render 'shared/errors', resource: @badge %>
+
+      <div class="form-group">
+        <p class="form-field is-required">
+          <%= form.label :name %>
+          <%= form.text_area :name, id: :test_title, class: 'form-control' %>
+        </p><br>
+
+        <p class="form-field is-required">
+          <%= form.label :image_url %>
+          <%= form.text_field :image_url, id: :test_level, class: 'form-control',
+                              value: (form.object.image_url || BadgesHelper::DEFAULT_BADGE_IMAGE_URL) %>
+        </p>
+        <p class="alert alert-primary">
+        Default: '<%= BadgesHelper::DEFAULT_BADGE_IMAGE_URL %>'<br><br>
+        Option 1: '<%= BadgesHelper::BADGE_IMAGE_URLS.first %>',<br>
+        Option 2: '<%= BadgesHelper::BADGE_IMAGE_URLS.second %>'
+        </p><br>
+
+        <p class="form-field is-required">
+          <%= form.label :rule_type %>
+          <%= form.text_field :rule_type, id: :rule_type, class: 'form-control' %>
+        </p><br>
+
+        <p class="alert alert-primary">
+          <b>Rule_Type:</b><br>
+          <% %w[category level first_try].each do |title| %>
+            <%= title %><br>
+          <% end %>
+        </p><br>
+
+        <p>
+          <%= form.label :rule_option %>
+          <%= form.text_field :rule_option, id: :rule_option, class: 'form-control' %>
+        </p><br>
+
+        <p class="alert alert-primary">
+          <b>Level:</b> 1 - 100
+          <br><br>
+          <b>Category:</b>
+          <br>
+          <% Category.pluck(:id, :title).each do |id, title| %>
+            <%= title %>: [ <%= id %> ] <br>
+          <% end %>
+        </p><br>
+
+        <p><%= form.submit class: "btn btn-outline-primary" %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="row justify-content-md-center mt-3 ">
+  <div class="col-md-auto mb-3">
+    <h1><%= t('.header') %></h1>
+
+    <p>
+      <%= link_to t('.new_badge'), new_admin_badge_path, class: "btn btn-outline-primary btn-lg" %>
+    </p>
+
+    <%= render 'shared/errors', resource: @badge %>
+
+    <%= render 'badge_table' %>
+
+  </div>
+</div>

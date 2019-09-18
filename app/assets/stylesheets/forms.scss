@@ -1,0 +1,5 @@
+.form-field.is-required > label:first-child:after {
+  content: '*';
+  margin-left: 2px;
+  color: red;
+}

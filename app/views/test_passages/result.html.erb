@@ -7,6 +7,8 @@
       <%= t('.questions_with_correct_answers', correct_questions: @test_passage.correct_questions) %>
     </p>
 
+    <%= render 'badges/badge_table' %>
+
     <div class="card text-center mb-3">
       <div class="card-body">
         <%= success_percentage_result_message(@test_passage) %> <br>

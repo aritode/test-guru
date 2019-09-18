@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login , sign_out: :logout }
 
+  resources :badges, only: :index
+  get 'badges/collected', to: "badges#collected", as: "collected_badges"
+
   resources :contacts, only: :create
   get 'contact-us', to: "contacts#new", as: "new_contact"
 
@@ -30,6 +33,7 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :badges
     resources :gists, only: :index
   end
 

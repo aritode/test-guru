@@ -5,6 +5,8 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_question, on: %i[create update]
 
+  scope :passed, -> { where(success: true) }
+
   SUCCESS_SCORE = 85
 
   def test_passed?
@@ -19,6 +21,7 @@ class TestPassage < ApplicationRecord
     if correct_answer?(answer_ids)
       self.correct_questions += 1
     end
+    self.success = test_passed?
 
     save!
   end
