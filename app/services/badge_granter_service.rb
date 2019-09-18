@@ -2,25 +2,26 @@ class BadgeGranterService
 
   def initialize(test_passage)
     @test_passage = test_passage
+    @badges = []
   end
 
   def call
-    @test_passage.user.badges << check_achievement unless check_achievement.nil?
+    check_achievements!
+    @test_passage.user.badges.push(@badges)
   end
 
-  def check_achievement
-    if @test_passage.test_passed?
-      Badge.all.select do |badge|
-        send("rule_type_#{badge.rule_type.downcase}?", badge.rule_option)
-      end
-    end
-  end
-
-  def method_missing(m, *args, &block)
-    # puts "[ERROR] Rule_type:  #{m} does not exist"
+  def achievements
+    check_achievements!
+    @badges
   end
 
   private
+
+  def check_achievements!
+    @badges = Badge.all.select do |badge|
+      send("rule_type_#{badge.rule_type.downcase}?", badge.rule_option)
+    end
+  end
 
   def rule_type_first_try?(_option)
     test_passages = TestPassage.where(user: @test_passage.user, test: @test_passage.test)
