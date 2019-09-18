@@ -1,0 +1,19 @@
+<% if @badges.present? %>
+  <table class="table table-striped table-hover">
+    <thead class="thead-dark">
+    <tr>
+      <th class="sort-by-title pointer">
+        <%= t('.table.title') %>
+        <%= octicon 'arrow-up', class: 'text-success hide' %>
+        <%= octicon 'arrow-down', class: 'text-success hide' %>
+      </th>
+      <th><%= t('.table.image') %></th>
+    </tr>
+    </thead>
+
+    <%= render @badges %>
+
+  </table>
+<% else %>
+  <p><%= t('.no_badges_available') %></p>
+<% end %>

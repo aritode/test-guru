@@ -103,12 +103,6 @@ ru:
         success: "Бэйдж успешно создан."
       index:
         header: "Доступные Бэйджи"
-        table:
-          title: "Название"
-          image: "Изображение"
-          rule_type: "Rule Type"
-          rule_option: "Rule Option"
-          actions: "Действия"
         new_badge: "Новый бэйдж"
         no_badges_available: "Нет доступных бэйджей"
       edit:
@@ -126,6 +120,14 @@ ru:
         image_url: "Image Url"
         rule_type: "Rule Type"
         rule_option: "Rule Option"
+      badge_table:
+        table:
+          title: "Название"
+          image: "Изображение"
+          rule_type: "Rule Type"
+          rule_option: "Rule Option"
+          actions: "Действия"
+        no_badges_available: "Нет доступных бэйджей"
 
     tests:
       create:
@@ -212,17 +214,14 @@ ru:
   badges:
     index:
       header: "Доступные Бэйджи"
+      no_badges_available: "Нет доступных бэйджей"
+    collected:
+      header: "Полученные бэйджи Гуру"
+      no_badges_available: "Нет полученных бэйджей"
+    badge_table:
       table:
         title: "Название"
         image: "Изображение"
         rule_type: "Rule Type"
         rule_option: "Rule Option"
       no_badges_available: "Нет доступных бэйджей"
-    collected:
-      header: "Полученные бэйджи Гуру"
-      table:
-        title: "Название"
-        image: "Изображение"
-        rule_type: "Rule Type"
-        rule_option: "Rule Option"
-      no_badges_available: "Нет полученных бэйджей"

@@ -101,12 +101,6 @@ en:
         success: "Badge successfully created"
       index:
         header: "Available Badges"
-        table:
-          title: "Title"
-          image: "Image"
-          rule_type: "Rule Type"
-          rule_option: "Rule Option"
-          actions: "Actions"
         new_badge: "New Badge"
         no_badges_available: "No available badges"
       edit:
@@ -124,6 +118,14 @@ en:
         image_url: "Image Url"
         rule_type: "Rule Type"
         rule_option: "Rule Option"
+      badge_table:
+        table:
+          title: "Title"
+          image: "Image"
+          rule_type: "Rule Type"
+          rule_option: "Rule Option"
+          actions: "Actions"
+        no_badges_available: "No badges available"
     tests:
       create:
         success: "Test was successfully created."
@@ -209,14 +211,11 @@ en:
   badges:
     index:
       header: "Available Badges"
-      table:
-        title: "Title"
-        image: "Image"
-        rule_type: "Rule Type"
-        rule_option: "Rule Option"
       no_badges_available: "No badges available"
     collected:
       header: "Badges of Guru"
+      no_badges_available: "No badges available"
+    badge_table:
       table:
         title: "Title"
         image: "Image"
