@@ -27,8 +27,8 @@ bill = User.create(first_name: 'Bill', last_name: 'Jones',email: 'BillyBo@gmailt
 
 html = frontend.tests.create(title: 'HTML', level: 0, author: john)
 css = frontend.tests.create(title: 'CSS', level: 1, author: john)
-ruby = backend.tests.create(title: 'Ruby', level: 2, author: bill)
-go_lang = backend.tests.create(title: 'Go', level: 3, author: bill)
+ruby = backend.tests.create(title: 'Ruby', level: 2, timer: 15, author: bill)
+go_lang = backend.tests.create(title: 'Go', level: 3, timer: 15, author: bill)
 swift = mobile.tests.create(title: 'Swift', level: 4, author: daniel)
 
 # Questions

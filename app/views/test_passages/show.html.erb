@@ -28,4 +28,11 @@
     <%= render 'form' %>
   </div>
 
+  <% if @test_passage.test.timer %>
+    <b><%= t('.remaining_time') %>:</b>
+    <%= content_tag :span, '', id: :timer,
+                    data: { timer: @test_passage.timer_finish_time.to_s } %>
+    <%= t('.minutes') %>.
+  <% end %>
+
 <% end %>

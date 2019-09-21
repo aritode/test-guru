@@ -21,9 +21,17 @@ class TestPassage < ApplicationRecord
     if correct_answer?(answer_ids)
       self.correct_questions += 1
     end
-    self.success = test_passed?
+    self.success = test_passed? && !time_is_up?
 
     save!
+  end
+
+  def timer_finish_time
+    created_at + test.timer.minutes
+  end
+
+  def time_is_up?
+    test.timer? && timer_finish_time.past?
   end
 
   def success_percentage
