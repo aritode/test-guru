@@ -20,6 +20,7 @@ en:
       test:
         title: "Title"
         level: "Level"
+        timer: "Timer"
         category_id: "Category"
       question:
         body: "Body"
@@ -70,7 +71,9 @@ en:
       table:
         title: "Title"
         level: "Level"
+        category: "Category"
         questions: "Questions"
+        timer: "Timer"
         actions: "Actions"
     test:
       start_button: "Start"
@@ -91,6 +94,8 @@ en:
       header: "Passing the %{test_passage_test_title} Test"
       no_available_questions: "There is no available Questions"
       no_available_answers: "There is no available Answers"
+      remaining_time: "Remaining time"
+      minutes: "minutes"
     gist:
       success: "Gist was successfully created! Link: %{url}"
       failure: "An error occurred while saving gist!"
@@ -150,7 +155,9 @@ en:
         tests: "Test"
         title: "Title"
         level: "Level"
+        timer: "Timer"
         author: "Author"
+        category: "Category"
         questions: "Questions"
       form_inline:
         submit: "OK"

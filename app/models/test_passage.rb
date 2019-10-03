@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   SUCCESS_SCORE = 85
 
   def test_passed?
-    success_percentage >= SUCCESS_SCORE
+    success_percentage >= SUCCESS_SCORE && !time_is_up?
   end
 
   def completed?
@@ -18,12 +18,20 @@ class TestPassage < ApplicationRecord
   end
 
   def accept!(answer_ids)
-    if correct_answer?(answer_ids)
+    if correct_answer?(answer_ids) && !time_is_up?
       self.correct_questions += 1
     end
     self.success = test_passed?
 
     save!
+  end
+
+  def timer_finish_time
+    created_at + test.timer.minutes
+  end
+
+  def time_is_up?
+    test.timer? && timer_finish_time.past?
   end
 
   def success_percentage

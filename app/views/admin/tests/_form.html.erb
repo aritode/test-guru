@@ -16,6 +16,11 @@
         </p><br>
 
         <p>
+          <%= form.label :timer %>
+          <%= form.number_field :timer, id: :test_timer, class: 'form-control' %>
+        </p><br>
+
+        <p>
           <%= form.label :category_id %>
           <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true,
                                      class: 'form-control' %>

@@ -5,6 +5,8 @@
   </td>
   <td class="align-middle"><%= test.level %></td>
   <td class="align-middle"><%= test.questions.count %></td>
+  <td class="align-middle"><%= test.category.title %></td>
+  <td class="align-middle"><%= test.timer || '-' %></td>
   <td class="align-middle">
     <%= link_to t('actions.show'), admin_test_path(test), class: "btn btn-outline-primary" %>
     <%= link_to t('actions.edit'),

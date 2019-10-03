@@ -20,6 +20,7 @@ ru:
       test:
         title: "Название"
         level: "Уровень"
+        timer: "Таймер"
         category_id: "Категория"
       question:
         body: "Тело вопроса"
@@ -72,7 +73,9 @@ ru:
       table:
         title: "Название"
         level: "Уровень"
+        category: "Категория"
         questions: "Вопросы"
+        timer: "Таймер"
         actions: "Действия"
     test:
       start_button: "Старт"
@@ -93,6 +96,8 @@ ru:
       header: "Прохождение %{test_passage_test_title} Теста"
       no_available_questions: "Нет доступных Вопросов"
       no_available_answers: "Нет доступных Ответов"
+      remaining_time: "Оставшееся время"
+      minutes: "минут"
     gist:
       success: "Gist успешно сохранён! Ссылка: %{url}"
       failure: "Во время сохранения gist произошла ошибка!"
@@ -138,6 +143,8 @@ ru:
           title: "Название"
           level: "Уровень"
           questions: "Вопросы"
+          category: "Категория"
+          timer: "Таймер"
           actions: "Действия"
         no_tests_available: "Нет доступных тестов"
         new_test: "Новый тест"
@@ -153,7 +160,9 @@ ru:
         tests: "Тест"
         title: "Название"
         level: "Уровень"
+        timer: "Таймер"
         author: "Автор"
+        category: "Категория"
         questions: "Вопросы"
       form_inline:
         submit: "OK"

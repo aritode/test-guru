@@ -15,6 +15,14 @@
           <strong><%= t('.author') %>:</strong> <%= @test.author.full_name.html_safe %>
         </p>
 
+        <p class="card-text mt-2">
+          <strong><%= t('.category') %>:</strong> <%= @test.category.title %>
+        </p>
+
+        <p class="card-subtitle text-muted mb-4">
+          <strong><%= t('.timer') %>:</strong> <%= @test.timer || '-' %>
+        </p>
+
         <%= link_to t('navigation.edit'), edit_admin_test_path(@test), class: "card-link" %> |
         <%= link_to t('navigation.back'), admin_tests_path, class: "btn btn-primary" %>
       </div>
