@@ -41,7 +41,7 @@ gem "octokit", "~> 4.0"
 
 # AUTH
 
-gem 'devise', '~> 4.0'
+gem 'devise', '~> 4.7'
 
 # NETWORKING
 
