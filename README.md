@@ -27,3 +27,35 @@ The real-world objects represented in the application are:
 - Category
 - Result
 - User
+
+## Ruby version
+
+This application uses Ruby version 2.5.1.
+
+## System dependencies
+
+This application uses the following gems:
+
+- Rails 5.2.1
+- PostgreSQL (pg)
+- Puma
+- Sass for stylesheets (sass-rails)
+- Uglifier for JavaScript assets compression
+- CoffeeScript for .coffee assets and views (coffee-rails)
+- Turbolinks for faster navigation
+- Jbuilder for building JSON APIs
+- Bootsnap for reducing boot times
+- Octokit for GitHub API
+- Devise for authentication
+- Faraday for HTTP networking
+- Rails-i18n and devise-i18n for localization
+- jQuery, Bootstrap, and Octicons for UI
+
+## Configuration
+
+To configure the application, you need to set up the database and install all the dependencies. You can do this by running:
+
+```bash
+bundle install
+rails db:setup
+```
