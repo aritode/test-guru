@@ -1,34 +1,29 @@
-# TestGuru
+# Test Management Application
 
-Приложение для создания, управления и выполнения различных тестов. Тесты с вопросами и вариантами ответов.
+This application is designed for creating, managing, and executing various tests. The tests consist of questions and answer options.
 
-Основные возможности:
+## Main Features
 
-* Создание тестов и управление ими
+- Test creation and management
+- Authentication
+- Basic access control
+- Test execution
+- Publishing results on social networks
 
-* Аутентификация
+## User Groups
 
-* Базовое разграничение прав доступа
+There are two user groups:
 
-* Выполнение тестов
+1. **Test Takers**: This group of users is responsible for selecting and taking tests.
+2. **Test Administrators**: This group of users is responsible for creating and managing tests.
 
-* Публикация результатов в соцсети
+## Entities
 
-2 группы пользователей:
+The real-world objects represented in the application are:
 
-- 1 группа пользователей - занимается выбором тестов, их прохождением,
-- 2 группа пользователей - это администраторы тестов, в обязанности которых входит создание и управление тестами
-
-### Список сущностей (объектов реального мира):
-
-* Тест (Test)
-
-* Вопрос (Question)
-
-* Ответ (Answer)
-
-* Категория (Category)
-
-* Результат (Result)
-
-* Пользователи (User)
+- Test
+- Question
+- Answer
+- Category
+- Result
+- User
